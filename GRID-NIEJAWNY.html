@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .portfolio{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr)) ;
+            /*AUTO-FILL POZWALA UMIEŚCIĆ TYLE KOLUMN NA ILE JEST MIEJSCE
+             NIE ZMIENIAJĄC ZADKLAROWANEJ WIELKOŚCI GRIDA*/
+            grid-auto-rows: 1fr; /* Automatycznie deklaruje*/
+            grid-auto-flow: row dense; /* row jest domyślny, dense auto matycznie rozmieszcza elementy i stara się tak układać
+            żeby nie było plam po między elementami (przerw) ale ma to swoje żniwo i często zdaża się że elementy są nie pokolei (szukanie przerw) */
+           
+        }
+        .portfolio > figure{
+            margin: 0;
+        }
+        .portfolio img{
+            max-width: 60vw;
+           
+        }
+        .portfolio figcaption{
+            padding:  0.3em 0.8em;
+            background-color: rgba(0,0, 0,0.3);
+            color: #fff;
+            text-align: right;
+        }
+         .oversized{
+            grid-column: span 2; /* Rozciąganioe tego elementu na dwa kolumny (jakieś, nie ważne)*/
+            grid-row: span 2; /* rozciągniecie na dwa wiersze*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portfolio">
+        <figure>
+            <img src="portfolio/1.jpg" alt="">
+            <figcaption>Web Project 01</figcaption>
+        </figure>
+        <figure>
+            <img src="portfolio/2.jpg" alt="">
+            <figcaption>Web Project 02</figcaption>
+        </figure>
+        <figure>
+            <img src="portfolio/3.jpg" alt="">
+            <figcaption>Web Project 03</figcaption>
+        </figure>
+        <figure class="oversized">
+            <img  src="portfolio/4.jpg" alt="">
+            <figcaption>Web Project 04[NEW]</figcaption>
+        </figure>
+        <figure>
+            <img src="portfolio/5.jpg" alt="">
+            <figcaption>Web Project 05 [NEW]</figcaption>
+        </figure>
+        <figure>
+            <img src="portfolio/6.jpg" alt="">
+            <figcaption>Web Project 06</figcaption>
+        </figure>
+        <figure  class="oversized">
+            <img src="portfolio/7.jpg" alt="">
+            <figcaption>Web Project 07</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
